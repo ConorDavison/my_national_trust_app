@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello:
-    print('hello my national trust')
+def hello():
+    return 'hello my national trust'
 
 
 if __name__ == "__main__":
