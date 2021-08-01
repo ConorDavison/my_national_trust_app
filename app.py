@@ -25,6 +25,19 @@ def the_sites():
     return render_template('sites.html', sites=sites)
 
 
+@app.route("/home")
+def home():
+    if "user" in session:
+        user = mongo.db.users.find_one(
+            {'username': session['user']})
+        
+        return render_template('profile.html')
+    
+    else:
+
+        return render_template('index.html')
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
