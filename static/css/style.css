@@ -5,3 +5,7 @@
 body {
     background-color: #9ca689;
 }
+
+.flash h4 {
+    line-height: 2;
+}
