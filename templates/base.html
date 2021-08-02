@@ -24,7 +24,6 @@
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Sites</a></li>
-                <li><a href="#">Log in</a></li>
                 <li><a href="#">Log out</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
               </ul>
@@ -36,20 +35,19 @@
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Sites</a></li>
-                <li><a href="#">Log in</a></li>
                 <li><a href="#">Log out</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
           </ul>
                 
     </header>
 
     <section>
       <!-- flash messages show here-->
-      {% with messages = get_flashed_messages %}
+      {% with messages = get_flashed_messages() %}
         {% if messages %}
           {% for message in messages %}
             <row class="flash">
-              <h4 class="center-align teal text-darken-4">{{ messages }}</h4> 
+              <h4 class="center-align teal darken-4">{{ messages }}</h4> 
             </row>
           {% endfor %}
         {% endif %}
