@@ -32,7 +32,7 @@ def home():
         user = mongo.db.users.find_one(
             {'username': session['user']})
 
-        return render_template('index.html')
+        return render_template('profile.html')
 
     else:
 
@@ -59,6 +59,8 @@ def register():
         # put user into 'session' cookie
         session['user'] = request.form.get("username").lower()
         flash("You have successfully registered, welcome..")
+        return redirect(url_for('profile.html', username=session['user']))
+
     return render_template('register.html')
 
 
@@ -75,6 +77,9 @@ def login():
                 flash(
                     "Welcome {}, hope you're well".format(
                         request.form.get("username")))
+                return redirect(url_for(
+                    'profile.html', username=session['user']))
+
             else: 
                 flash('Username and/or Password is incorrect')
                 return redirect(url_for('login'))
@@ -83,6 +88,13 @@ def login():
             flash("Username and/or Password is incorrect")
             return redirect(url_for('login'))
     return render_template('index.html')
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.users.find_one(
+        {'username': session["user"]})['username']
+    return render_template('profile.html', username=username)
 
 
 if __name__ == "__main__":
