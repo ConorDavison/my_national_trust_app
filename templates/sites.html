@@ -1,24 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for site in sites %}
-        {{site.site_name}}<br>
-        {{site.site_location}}<br>
-        {{site.site_description}}<br>
-    {% endfor %}
     <ul class="collapsible popout">
+        {% for site in sites %}
         <li>
-          <div class="collapsible-header text-shadow"><i class="fas fa-sort-down"> filter_drama</i>First</div>
-          <div class="collapsible-body light-green lighten-2"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header">
+                <i class="fas fa-sort-down"></i>
+                <strong>{{site.site_name}}</strong>
+            </div>
+
+            <div class="collapsible-body light-green lighten-2">
+                <strong>{{site.site_location}}</strong>
+                <p>{{site.site_description}}</p>   
+            </div>
         </li>
-        <li>
-          <div class="collapsible-header text-shadow"><i class="fas fa-sort-down"> place</i>Second</div>
-          <div class="collapsible-body light-green lighten-2""><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header text-shadow"><i class="fas fa-sort-down"> whatshot</i>Third</div>
-          <div class="collapsible-body light-green lighten-2""><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-      </ul>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
     

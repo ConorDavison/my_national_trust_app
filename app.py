@@ -35,7 +35,7 @@ def home():
 @app.route("/")
 @app.route("/the_sites")
 def the_sites():
-    sites = mongo.db.sites.find()
+    sites = list(mongo.db.sites.find())
     return render_template('sites.html', sites=sites)
 
 
