@@ -19,13 +19,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
-@app.route("/the_sites")
-def the_sites():
-    sites = mongo.db.sites.find()
-    return render_template('sites.html', sites=sites)
-
-
 @app.route("/home")
 def home():
     if "user" in session:
@@ -37,6 +30,13 @@ def home():
     else:
 
         return render_template('index.html')
+
+
+@app.route("/")
+@app.route("/the_sites")
+def the_sites():
+    sites = mongo.db.sites.find()
+    return render_template('sites.html', sites=sites)
 
 
 @app.route('/register', methods=["GET", "POST"])
@@ -59,7 +59,7 @@ def register():
         # put user into 'session' cookie
         session['user'] = request.form.get("username").lower()
         flash("You have successfully registered, welcome..")
-        return redirect(url_for('profile.html', username=session['user']))
+        return redirect(url_for('profile', username=session['user']))
 
     return render_template('register.html')
 
@@ -78,7 +78,7 @@ def login():
                     "Welcome {}, hope you're well".format(
                         request.form.get("username")))
                 return redirect(url_for(
-                    'profile.html', username=session['user']))
+                    'profile', username=session['user']))
 
             else: 
                 flash('Username and/or Password is incorrect')
@@ -94,7 +94,18 @@ def login():
 def profile(username):
     username = mongo.db.users.find_one(
         {'username': session["user"]})['username']
-    return render_template('profile.html', username=username)
+
+    if session['user']:
+        return render_template('profile.html', username=username)
+
+    return redirect(url_for('home'))
+
+
+@app.route('/logout')
+def logout():
+    flash("You have logged out")
+    session.pop('user')
+    return redirect(url_for('home'))
 
 
 if __name__ == "__main__":
