@@ -110,7 +110,8 @@ def logout():
 
 @app.route('/visit', methods=["GET", "POST"])
 def visit():
-    return render_template("visit.html")
+    sites = mongo.db.sites.find().sort('site_name', 1)
+    return render_template("visit.html", sites=sites)
 
 
 if __name__ == "__main__":

@@ -7,3 +7,9 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.collapsible').collapsible();
 });
+
+// initialise dropdown on visit.html
+$(document).ready(function(){
+  $('select').formSelect();
+});
+  

@@ -2,7 +2,7 @@
 {% block content %}
 
 <h4 class="center-align">
-    Plan your Visit
+    Plan your visit..
 </h4>
 
 <div class="row card-panel grey lighten-5">
@@ -10,10 +10,10 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix teal-text text-darken-4"></i>
-                <select id="site_name name="site_name" class="validate" required>
+                <select id="site_name" name="site_name" class="validate" required>
                     <option value="{{ url_for('visit') }}" disabled selected>Choose Site</option>
                     {% for site in sites %}
-                        <option value="{{ sites.site_name }}"</option>
+                        <option value="{{ site.site_name }}">{{ site.site_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="site_name">Site Name</label>
@@ -31,7 +31,7 @@
         <!-- Visit date-->
         <div class="row">
             <div class="input-field col s12">
-            <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+            <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
             <input id="due_date" name="due_date"type="text" type="text" class="datepicker validate" required>
             <label for="due_date">Visit Date</label>
             </div>
