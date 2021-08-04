@@ -108,6 +108,11 @@ def logout():
     return redirect(url_for('home'))
 
 
+@app.route('/visit', methods=["GET", "POST"])
+def visit():
+    return render_template("visit.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

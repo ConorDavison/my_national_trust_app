@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h4 class="center-align">
+    Plan your Visit
+</h4>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="#">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix teal-text text-darken-4"></i>
+                <select id="site_name name="site_name" class="validate" required>
+                    <option value="{{ url_for('visit') }}" disabled selected>Choose Site</option>
+                    {% for site in sites %}
+                        <option value="{{ sites.site_name }}"</option>
+                    {% endfor %}
+                </select>
+                <label for="site_name">Site Name</label>
+            </div>
+        </div>
+        <!-- task description-->
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="fas fa-align-left prefix teal-text text-darken-4"></i>
+            <textarea id="notes" name="notes" minlength="5" maxlength="200" 
+                class="materialize-textarea"></textarea>
+            <label for="notes">Notes..</label>
+            </div>
+        </div>
+        <!-- Visit date-->
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+            <input id="due_date" name="due_date"type="text" type="text" class="datepicker validate" required>
+            <label for="due_date">Visit Date</label>
+            </div>
+        </div>
+        <!--submit btn-->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large teal darken-1 text-shadow">
+                    Add Task <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+
+
+{% endblock %}

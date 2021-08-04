@@ -24,6 +24,7 @@
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
+                <li><a href="{{ url_for('visit') }}">Visit</a></li>
                 <li><a href="{{ url_for('logout') }}">Log out</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
               </ul>
@@ -35,6 +36,7 @@
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
+                <li><a href="{{ url_for('visit') }}">Visit</a></li>
                 <li><a href="{{ url_for('logout') }}">Log out</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
           </ul>
@@ -63,6 +65,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="assets/js/maps.js"></script>
     {% block scripts %}
     {% endblock %}
 </body>
