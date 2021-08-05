@@ -25,7 +25,7 @@ def home():
         user = mongo.db.users.find_one(
             {'username': session['user']})
 
-        return render_template('profile.html')
+        return render_template('index.html')
 
     else:
 
@@ -110,6 +110,16 @@ def logout():
 
 @app.route('/visit', methods=["GET", "POST"])
 def visit():
+    if request.method == "POST":
+        visits = {
+            "site_name": request.form.get("site_name"),
+            "notes": request.form.get("notes"),
+            "arrival": request.form.get("arrival")
+        }
+        mongo.db.planned_visits.insert_one(visits)
+        flash("Visit has been added to your profile")
+        return  redirect(url_for('home'))
+
     sites = mongo.db.sites.find().sort('site_name', 1)
     return render_template("visit.html", sites=sites)
 

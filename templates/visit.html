@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h4 class="center-align">
+<h4 class="center-align text-shadow">
     Plan your visit..
 </h4>
 
@@ -32,15 +32,15 @@
         <div class="row">
             <div class="input-field col s12">
             <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
-            <input id="due_date" name="due_date"type="text" type="text" class="datepicker validate" required>
-            <label for="due_date">Visit Date</label>
+            <input id="arrival" name="arrival"type="text" type="text" class="datepicker validate" required>
+            <label for="arrival">Arrival</label>
             </div>
         </div>
         <!--submit btn-->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large teal darken-1 text-shadow">
-                    Add Task <i class="fas fa-plus-square right"></i>
+                <button type="submit" class="btn-large teal darken-4 text-shadow">
+                    Add Visit <i class="fas fa-plus-square right"></i>
                 </button>
             </div>
         </div>
