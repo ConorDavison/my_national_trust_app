@@ -19,6 +19,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.route("/")
 @app.route("/home")
 def home():
     if "user" in session:
@@ -32,7 +33,6 @@ def home():
         return render_template('index.html')
 
 
-@app.route("/")
 @app.route("/the_sites")
 def the_sites():
     sites = list(mongo.db.sites.find())
@@ -95,8 +95,11 @@ def profile(username):
     username = mongo.db.users.find_one(
         {'username': session["user"]})['username']
 
+    visits = mongo.db.planned_visits.find()
+
     if session['user']:
-        return render_template('profile.html', username=username)
+        return render_template(
+            'profile.html', username=username, visits=visits)
 
     return redirect(url_for('home'))
 
@@ -118,7 +121,7 @@ def visit():
         }
         mongo.db.planned_visits.insert_one(visits)
         flash("Visit has been added to your profile")
-        return  redirect(url_for('home'))
+        return redirect(url_for('home'))
 
     sites = mongo.db.sites.find().sort('site_name', 1)
     return render_template("visit.html", sites=sites)

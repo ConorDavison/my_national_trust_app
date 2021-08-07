@@ -7,9 +7,27 @@
                 <h4 class="center-align">
                     Welcome {{ username }}..
                 </h4>
+                <p class="center-align">
+                    <em>Below are the upcoming visits you have planned, enjoy!</em> 
+                </p>
             </div>
         </div>
     </div>
+    <ul class="collapsible popout">
+        {% for visit in visits %}
+        <li>
+            <div class="collapsible-header">
+                <i class="fas fa-sort-down"></i>
+                <strong>{{visit.site_name}}</strong>
+            </div>
+
+            <div class="collapsible-body light-green lighten-2">
+                <strong>{{visit.notes}}</strong>
+                <p>{{visit.arrival}}</p>   
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 
     
 {% endblock %}
