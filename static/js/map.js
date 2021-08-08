@@ -8,7 +8,7 @@ function initMap() {
     });
   
     // Add some markers to the map.
-    const marker = new google.maps.Marker({
+    /*const marker = new google.maps.Marker({
       position:{lat: 55.16792152519541, lng: -6.810822099777691},
       map:map
     })
@@ -21,10 +21,30 @@ function initMap() {
     const detailWindow = new google.maps.InfoWindow({
       content: `<h4>Mussenden Temple</h4>`
     })
+    */
+    
+    
+   
+  function addMarker(property){
+    
+    const marker = new google.maps.Marker({
+      position:property.location,
+      map:map
+    })
+
+    const detailWindow = new google.maps.InfoWindow({
+      content: property.content
+    })
 
     marker.addListener("click", () =>{
       detailWindow.open(map, marker);
     })
+  }
+
+    addMarker({location:{lat: 55.16792152519541, lng: -6.810822099777691},
+    content: `<h4>Mussenden Temple</h4>`})
+    addMarker({location:{lat: 54.8255649690015, lng: -7.46340543048264},
+    content: `<h4>Grays Printing Press</h4>`})
 
 } 
  
