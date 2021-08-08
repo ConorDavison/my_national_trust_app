@@ -10,3 +10,8 @@ body {
     line-height: 2;
     color: seashell;
 }
+
+/*-- Google Map API ---*/
+#map {min-height: 360px;
+    margin: 15px
+}
