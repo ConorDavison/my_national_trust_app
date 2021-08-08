@@ -13,17 +13,17 @@ function initMap() {
       map:map
     })
     // Add a marker clusterer to manage the markers.
-    new MarkerClusterer(map, markers, {
-      imagePath:
-        "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-    });
+    //new MarkerClusterer(map, marker, {
+      //imagePath:
+        //"https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+    //});
 
     const detailWindow = new google.maps.InfoWindow({
-      content: "<h2>Tussendon</h2>"
+      content: `<h4>Mussenden Temple</h4>`
     })
 
-    marker.addListener('mouseover', () =>{
-      detailWindoww.open(map, marker);
+    marker.addListener("click", () =>{
+      detailWindow.open(map, marker);
     })
 
 } 
