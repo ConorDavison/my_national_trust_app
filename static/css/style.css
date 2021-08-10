@@ -15,3 +15,13 @@ body {
 #map {min-height: 360px;
     margin: 15px
 }
+
+
+/*-- edit and done btns on profile.html */
+.btn-small {
+    margin: 5px;
+}
+
+.collapsible-header .col strong {
+    margin: 5px;
+}

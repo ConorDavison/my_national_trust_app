@@ -9,7 +9,7 @@ function initMap() {
 
   
   
-  
+  // Array of marker locations
   let markerArray = [
 
     {location:{lat: 55.16792152519541, lng: -6.810822099777691},
