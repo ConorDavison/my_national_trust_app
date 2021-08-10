@@ -20,7 +20,7 @@
                 <i class="fas fa-sort-down"></i>
 
                 <a href="#" class="btn-small cyan lighten-4 black-text">Visitied</a>
-                <a href="#" class="btn-small teal lighten-4 black-text">Edit</a>
+                <a href="{{ url_for('edit_visit', visit_id=visit._id) }}"" class="btn-small teal lighten-4 black-text">Edit</a>
 
                 <strong>{{visit.site_name}}</strong>
             </div>

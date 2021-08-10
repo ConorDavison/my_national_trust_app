@@ -127,6 +127,13 @@ def visit():
     return render_template("visit.html", sites=sites)
 
 
+@app.route("/edit_visit/<visit_id>", methods=["GET", "POST"])
+def edit_visit(visit_id):
+    visit = mongo.db.planned_visits.find_one({"_id": ObjectId(visit_id)})
+    sites = mongo.db.sites.find().sort('site_name', 1)
+    return render_template("edit_visit.html", visit=visit, sites=sites)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h4 class="center-align text-shadow">
+Edit Visit
+</h4>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_visit', visit_id=visit_id) }}">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-location-arrow prefix teal-text text-darken-4"></i>
+                <select id="site_name" name="site_name" class="validate" required>
+                    <option value="{{ url_for('visit') }}" disabled selected>Choose Site</option>
+                    {% for site in sites %}
+                        <option value="{{ site.site_name }}">{{ site.site_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="site_name">Site Name</label>
+            </div>
+        </div>
+        <!-- task description-->
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="fas fa-align-left prefix teal-text text-darken-4"></i>
+            <textarea id="notes" name="notes" minlength="5" maxlength="300" 
+                class="materialize-textarea"></textarea>
+            <label for="notes">Notes..</label>
+            </div>
+        </div>
+        <!-- Visit date-->
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="fas fa-calendar-alt prefix teal-text text-darken-4"></i>
+            <input id="arrival" name="arrival"type="text" type="text" class="datepicker validate" required>
+            <label for="arrival">Arrival</label>
+            </div>
+        </div>
+        <!--submit btn-->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large teal darken-4 text-shadow">
+                    Edit Visit <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+
+
+{% endblock %}
