@@ -71,23 +71,24 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
+            # ensure hashed password matches user input
             if check_password_hash(
-                existing_user['password'], request.form.get('password')):
+                existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash(
-                    "Welcome {}, hope you're well".format(
-                        request.form.get("username")))
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
                 return redirect(url_for(
-                    'profile', username=session['user']))
+                    "profile", username=session['user']))
 
-            else: 
-                flash('Username and/or Password is incorrect')
-                return redirect(url_for('login'))
+            else:
+                flash("Incorrect username and/or password")
+                return redirect(url_for("login"))
 
         else:
-            flash("Username and/or Password is incorrect")
-            return redirect(url_for('login'))
-    return render_template('index.html')
+            # username doesnt exist
+            flash("Incorrect username and/or password")
+            redirect(url_for("home"))
+    return render_template("index.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -117,11 +118,12 @@ def visit():
         visits = {
             "site_name": request.form.get("site_name"),
             "notes": request.form.get("notes"),
-            "arrival": request.form.get("arrival")
+            "arrival": request.form.get("arrival"),
+            "username": session['user']
         }
         mongo.db.planned_visits.insert_one(visits)
         flash("Visit has been added to your profile")
-        return redirect(url_for('home'))
+        return redirect(url_for('the_sites'))
 
     sites = mongo.db.sites.find().sort('site_name', 1)
     return render_template("visit.html", sites=sites)
@@ -129,6 +131,16 @@ def visit():
 
 @app.route("/edit_visit/<visit_id>", methods=["GET", "POST"])
 def edit_visit(visit_id):
+    if request.method == "POST":
+        submit = {
+            "site_name": request.form.get("site_name"),
+            "notes": request.form.get("notes"),
+            "arrival": request.form.get("arrival")
+            
+        }
+        mongo.db.planned_visits.update({"_id": ObjectId(visit_id)}, submit)
+        flash("Visit has been edited")
+
     visit = mongo.db.planned_visits.find_one({"_id": ObjectId(visit_id)})
     sites = mongo.db.sites.find().sort('site_name', 1)
     return render_template("edit_visit.html", visit=visit, sites=sites)

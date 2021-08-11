@@ -5,7 +5,7 @@
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
                 <h4 class="center-align">
-                    Welcome {{ username }}..
+                    Welcome, {{ username }}..
                 </h4>
                 <p class="center-align">
                     <em>Below are the upcoming visits you have planned, enjoy!</em> 
@@ -27,7 +27,8 @@
 
             <div class="collapsible-body light-green lighten-2">
                 <strong>{{visit.notes}}</strong>
-                <p>{{visit.arrival}}</p>   
+                <p>{{visit.arrival}}</p> 
+                <p><em> planned by: {{ visit.username }} </em></p>  
             </div>
         </li>
         {% endfor %}
