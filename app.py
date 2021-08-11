@@ -39,6 +39,13 @@ def the_sites():
     return render_template('sites.html', sites=sites)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    sites = list(mongo.db.sites.find({"$text": {"$search": query}}))
+    return render_template("sites.html", sites=sites)
+
+
 @app.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == "POST":
