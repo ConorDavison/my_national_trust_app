@@ -18,10 +18,10 @@
         <li>
             <div class="collapsible-header">
                 <i class="fas fa-sort-down"></i>
-
+                {% if session.user|lower == visit.username|lower %}
                 <a href="#" class="btn-small cyan lighten-4 black-text">Visitied</a>
                 <a href="{{ url_for('edit_visit', visit_id=visit._id) }}"" class="btn-small teal lighten-4 black-text">Edit</a>
-
+                {% endif %}
                 <strong>{{visit.site_name}}</strong>
             </div>
 
