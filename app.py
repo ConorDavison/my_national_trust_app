@@ -136,7 +136,7 @@ def edit_visit(visit_id):
             "site_name": request.form.get("site_name"),
             "notes": request.form.get("notes"),
             "arrival": request.form.get("arrival")
-            
+
         }
         mongo.db.planned_visits.update({"_id": ObjectId(visit_id)}, submit)
         flash("Visit has been edited")
@@ -144,6 +144,13 @@ def edit_visit(visit_id):
     visit = mongo.db.planned_visits.find_one({"_id": ObjectId(visit_id)})
     sites = mongo.db.sites.find().sort('site_name', 1)
     return render_template("edit_visit.html", visit=visit, sites=sites)
+
+
+@app.route('/delete/<visit_id>')
+def delete(visit_id):
+    mongo.db.planned_visits.remove({"_id": ObjectId(visit_id)})
+    flash("Visit removed")
+    return redirect(url_for("the_sites"))
 
 
 if __name__ == "__main__":
