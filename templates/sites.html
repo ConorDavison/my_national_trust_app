@@ -27,7 +27,7 @@
             </div>
         </form>
     </div>
-
+    {% if sites|length > 0 %}
     <ul class="collapsible popout">
         {% for site in sites %}
         <li>
@@ -43,6 +43,9 @@
         </li>
         {% endfor %}
     </ul>
+    {% else %}
+    <h3 class="red-text center-align">No results</h3>
+    {% endif %}
 
 
 {% endblock %}
