@@ -21,24 +21,31 @@
               <a href="{{ url_for('home') }}" class="brand-logo">My National Trust</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
+                {% if session.user %}
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>>
                 <li><a href="{{ url_for('visit') }}">Visit</a></li>
+                <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
                 <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                {% else %}
+                <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
+                
+                {% endif %}
               </ul>
             </div>
           </nav>
         
           <ul class="sidenav" id="mobile-demo">
-                <li><h4 class="center-align teal-text text-darken-4">My National Trust</h4></li>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
-                <li><a href="{{ url_for('visit') }}">Visit</a></li>
-                <li><a href="{{ url_for('logout') }}">Log out</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% if session.user %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>>
+            <li><a href="{{ url_for('visit') }}">Visit</a></li>
+            <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            {% else %}
+            <li><a href="{{ url_for('home') }}">Home</a></li> 
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            
+            {% endif %}
           </ul>
                 
     </header>
