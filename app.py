@@ -46,7 +46,6 @@ def search():
     return render_template("sites.html", sites=sites)
     
 
-
 @app.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == "POST":

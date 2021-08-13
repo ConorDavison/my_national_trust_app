@@ -56,10 +56,11 @@ relevant imagery of some sites and the attractions will all be employed to offer
 * As a user, I want to be able to access the website, regardless of the device I am using.
 * As a user, I want to be able to easily navigate to other sections of the website regardless of the current section I'm viewing.
 * As a user, I expect all links of the site to be in full working order - and to be able to easily access any social media accounts relative to the company.
+* As a user, I want my own personal account to keep a track of my own planned visits.
 
 ### New User Goals
 
-* As a new user, I wouuld like to be able to see a list of the sites I can visit, whilst also being able to see the location and description of the selected site.
+* As a new user, I would like to be able to see a list of the sites I can visit, whilst also being able to see the location and description of the selected site.
 * As a new user, I want to be able to register for my own personal secure account, with my own profile page.
 * As a new user, I want to be able to visually see where a site is located on a map.
 * As a new user I want to be able to search for the sites I want to visit and select them.
