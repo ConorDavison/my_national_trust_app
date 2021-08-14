@@ -4,12 +4,14 @@
     <h4 class="center-align text-shadow">
         The Sites
     </h4>
+
+    <!-- Google maps API-->
     <div class="row">
         <div class="col-12" id="map">
 
         </div>
     </div>
-
+<!-- Search form  for list of Sites-->
     <div class="row card-panel grey lighten-5">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -27,6 +29,7 @@
             </div>
         </form>
     </div>
+    <!-- Collapsible accoridion for list of sites-->
     {% if sites|length > 0 %}
     <ul class="collapsible popout">
         {% for site in sites %}

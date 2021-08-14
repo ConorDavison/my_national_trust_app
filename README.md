@@ -13,7 +13,7 @@
   - [Returning User Goals](#Returning-User-Goals)
   - [Owner Goals](#Owner-Goals)
   - [User Potential](#User-Potential)
-  - [This Website](#This-Website)
+  - [This App](#This-App)
 
 - [User Design](#User-Design)
   - [Strategy](#Strategy)
@@ -29,6 +29,9 @@
 - [Features](#Features)
   - [Future Features](#Future-Features)
 - [Technology Used](#Technology-Used)
+  - [Languages](#Languages)
+  - [Libraries](#Libraries)
+  - [Database Management](#Database-Management)
 - [Syntax](#Syntax)
 - [Testing](#Testing)
   - [Code Validation](#Code-Validation)
@@ -109,3 +112,108 @@ This websites primary focus is to be an informal, casual app people can visit to
 * Producing and interactive website with clickable features that allow the user to find further information about the different attractions.
 * Internal page links that allow the user to navigate the website efficiently.
 * User authentication to enure that users have there own personal planner for upcoming trips.
+
+#### Future Scope
+**Potential for future implementation**
+* An 'About' section.
+* A seciton that allows past visitors to the mentioned sites to leave reviews.
+* For the app not to be contained to just Northern Ireland.
+* An interactive blog or newsletter.
+* The ability for users to 'favourite' the sites they enjoyed most.
+
+### Structure
+* Top level - 
+    * Simple title with navigation in header. This will be responsive and across all pages of website.
+* Body - 
+    * Main elements found here, depicting important information, relavant to the current page user is on.
+    * There will be button elements that enable the user to navigate the content easily and simply.
+    * Dependent on the page, there will be images with accompanying information for the user to discover.
+    * Dependent on the page there will be an interative map with clickable features to allow a user to access more information.
+* Footer - 
+    * Copyright information stored here.
+    * Some internal links may also be added here.
+
+### Design
+
+#### Color Scheme
+* The color of the scheme of the site was decided by using natural green colors that can be easily associated with a Northern Ireland and the National Trust.
+* The color of #004d40, complements the main and overall color dervived from the app theme. This color is strong and allows text to be easily read. 
+* Where suitable the color black was used for text against a white background, these are contrasting colors that allow the user to easily read the information.
+* With a neutral background color, the information depicted would not be too contrasting on the site when loaded.  
+
+#### Typography
+* The font utilised for this app was the Montserrat font. Thia font has the serif typeface, therefore Sans Serif will be used as the fallback font in case there is an issue when importing the fonts, or browsers not supporting these. Font was imported via Google Fonts completement the simplicity of the design giving a visually pleasing user experience.
+
+#### Imagery
+* Images used purely for some asthetically pleasing design.  
+* Font icons will be used throughout the website imported from [Font Awesome](https://fontawesome.com/). 
+  These will be used to further emphasise the different sections of the website. 
+  Using these icons adds a simple, effective and a subtle touch to the site that allows the user to understand what each section relates to. 
+  The icons will be relevant to the different section headings of the site.
+
+# Wireframes
+I Used Balsamiq to generate my Wireframes.
+
+![Wireframes](#)
+
+# Features
+* Functioning Nav bar with working links.
+* Responsive images.
+* Functioning interactive google map. 
+* Buttons that utilise Jquery for further interactivity.
+
+# Technology Used
+
+### Languages used
+* HTML5
+* CSS3
+* JavaScript
+* Python
+
+### Git
+* Was used for version control to commit to Git and push to Heroku.
+
+### Heroku 
+* Heroku was used in order to deploy the website.
+
+### BeFunky 
+  - used for resizing images used.
+
+### National Trust Site 
+  - used to source some imagery. Site information and locations.
+.
+### GitHub.
+- to store and display code.
+
+### Libraries
+* Materialize 
+  * Materialize was used to implement the responsiveness of the site, using their own custom classes.
+* jQuery
+  * jQuery was used to simplify the JavaScript code used. As recommended by Materialize.
+* Google Fonts 
+  * Google fonts was used to import the font "Montserrat" into the style.css file. This fonts was used exclusively throughout the development of this project.
+* Flask
+  * Flask was used as the web framework for the application.
+* PyMongo
+  * flask_pymongo was used a communication line between the MongoDB database and Python.
+* BSON
+  * bson.objectid is a required dependency for MongoDB management system. This enables the app to provide a more accurate results from the database.
+* Jinja
+  * Jinja templating language was used to simplify and display backend data in html with ease.
+* Werkzeug
+  * Werkzeug was used for password hashing and authentication.
+
+### Database Management
+* MongoDB
+  * MongoDB was the chosen NoSQL database for this website.
+* Mongo Atlas 
+  * MongoDB Atlas was the cloud database service used to host the database.
+
+
+
+
+
+
+
+### Weather API 
+* Weather widgit code sourced from weatherwidgit.io.

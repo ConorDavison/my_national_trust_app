@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 body {
     background-color: #9ca689;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .flash h4 {
