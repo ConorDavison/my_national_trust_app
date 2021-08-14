@@ -58,15 +58,13 @@ relevant imagery of some sites and the attractions will all be employed to offer
 * As a user, I expect all links of the site to be in full working order - and to be able to easily access any social media accounts relative to the company.
 * As a user, I want my own personal account to keep a track of my own planned visits.
 
-### New User Goals
+### As a Non-Registered User
 
-* As a new user, I would like to be able to see a list of the sites I can visit, whilst also being able to see the location and description of the selected site.
-* As a new user, I want to be able to register for my own personal secure account, with my own profile page.
-* As a new user, I want to be able to visually see where a site is located on a map.
-* As a new user I want to be able to search for the sites I want to visit and select them.
+* Navigate to Sign-Up page to Register an account.
 
 
-### Returning User Goals
+### Registered User Goals
+* As a user, log into my account to gain access to the full functionality of the app.
 * As a user, I want to be able to the upcoming visits I have planned.
 * As a user, I want to readily see the date I have chosen to visit the selcted site.
 * As a user I want to be able to Update, Edit and Delete any upcoming visits I have planned. 
@@ -91,3 +89,23 @@ This websites primary focus is to be an informal, casual app people can visit to
 * Offers a clean, consise and simplistic journey into planning any future trips to National Trust Sites in Northern Ireland.
 * Offers a means to use Google Maps in order to find an accurate location for the sites.
 * Provides clear, simple information and is fully responsive.
+
+## User Design
+
+### Strategy
+* With the main goal for this app to allow users to simply plan future trips to Northern Ireland National Trust sites, 
+  aesthetically pleasing and relevant imagery will allow the user to focus on the content, without being distracted. 
+  The design of the site needs to complement the content it is delivering. 
+* The 'Home' page allows users to read a small consise text box describing the purpose of this app. 
+* This website is aimed at users who want to be aware of the experiences the National Trust has to offer in Northern Ireland. 
+  There is no pressure to pursue these attractions. Moreover, there are different types of attractions to suit different types of potential users. The Google Map feature allows users to view the sites on an interactive map.
+* The weather widget allows users to view the weather for upcoming visits that have been planned. 
+
+### Scope
+* Responsive website for any viewing device size.
+* Responsive and interactive navigation bar.
+* Relevant images showing some sites mentioned on the app and useful information accompanying the attraction.
+* Implementation of API's to display information to the user.
+* Producing and interactive website with clickable features that allow the user to find further information about the different attractions.
+* Internal page links that allow the user to navigate the website efficiently.
+* User authentication to enure that users have there own personal planner for upcoming trips.
