@@ -34,3 +34,16 @@ body {
 .collapsible-header .col strong {
     margin: 5px;
 }
+
+/* welcome card on profile page */ 
+.welcome-row {
+    margin-top: 20px;
+}
+
+/* nav div wrapper to contain brand logo */
+@media screen and (max-width: 517px) {
+
+#title {
+    font-size: 15px;
+}
+}

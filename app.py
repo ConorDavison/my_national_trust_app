@@ -112,7 +112,7 @@ def profile(username):
 
 @app.route('/logout')
 def logout():
-    flash("You have logged out")
+    flash('You have logged out')
     session.pop('user')
     return redirect(url_for('home'))
 

@@ -8,6 +8,7 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    
     {% block styles %}
     {% endblock %}
     <title>My National Trust</title>
@@ -17,12 +18,12 @@
     <header>
 <!--Nav Bar-->
         <nav class="nav-extended text-shadow teal darken-4">
-            <div class="nav-wrapper">
-              <a href="{{ url_for('home') }}" class="brand-logo">My National Trust</a>
+            <div class="nav-wrapper nav-div">
+              <a href="{{ url_for('home') }}" class="brand-logo center" id="title">My National Trust</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('visit') }}">Visit</a></li>
                 <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
                 <li><a href="{{ url_for('logout') }}">Log out</a></li>
@@ -37,7 +38,7 @@
 <!--Mobile Nav Bar -->
           <ul class="sidenav" id="mobile-demo">
             {% if session.user %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('visit') }}">Visit</a></li>
             <li><a href="{{ url_for('the_sites') }}">Sites</a></li>
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
