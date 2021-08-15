@@ -46,4 +46,8 @@ body {
 #title {
     font-size: 15px;
 }
+
+.btn-small{
+    padding: 0px;
+}
 }
