@@ -9,8 +9,8 @@
 
 - [User Stories](#User-Stories)
   - [User Goals](#User-Goals)
-  - [New User Goals](#New-User-Goals)
-  - [Returning User Goals](#Returning-User-Goals)
+  - [Non Registerd User](#Non-Registered-User)
+  - [Registered User Goals](#Registerd-User-Goals)
   - [Owner Goals](#Owner-Goals)
   - [User Potential](#User-Potential)
   - [This App](#This-App)
@@ -61,7 +61,7 @@ relevant imagery of some sites and the attractions will all be employed to offer
 * As a user, I expect all links of the site to be in full working order - and to be able to easily access any social media accounts relative to the company.
 * As a user, I want my own personal account to keep a track of my own planned visits.
 
-### As a Non-Registered User
+### Non-Registered User
 
 * Navigate to Sign-Up page to Register an account.
 
@@ -209,11 +209,81 @@ I Used Balsamiq to generate my Wireframes.
 * Mongo Atlas 
   * MongoDB Atlas was the cloud database service used to host the database.
 
-
-
-
-
-
-
 ### Weather API 
 * Weather widgit code sourced from weatherwidgit.io.
+
+# Testing
+* All navigations links tested across all pages, no issues.
+* Text fields working correctly.
+* All elements of CRUD satisfied. Data can be sent to and from Database with no issues. Data and be read/created/updated and deleted.
+* Site fully responsive to all breakpoints.
+## Google Lighthouse
+* 
+## Functionality Testing
+- I used Chrome developer tools throughout the creation and devlopemnt of this site.
+## Combatability Testing
+-  The site has been tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tools and Chrome developer tools. 
+### Known bug
+-  
+## Code Validation
+- HTML has been passed through W3 Validator with no issues or warnings. 
+- CSS has passed through W3 JigSaw validator with no issues. 
+- JS - Passed through JSHint with no major issues some warnings to advise certain synatx is available in 'ES6 (use 'esversion: 6')'.
+- PEP8 !!!!  check this***
+
+## User Stories Testing
+- As a user, I want to be able to access the website, regardless of the device I am using.
+  > The website has been tested across virtual different devices with no issues.
+
+- As a user, I want to be able to easily navigate to other sections of the website regardless of the current section I'm viewing.
+  > Fully responiive navigation bar that allows you to visit any part of the site with ease.
+
+- As a user, I expect all links of the site to be in full working order - and to be able to easily access any social media accounts relative to the company. 
+  > All links have been tested and confirmed as working.  
+
+## Owner Stories Testing
+- Publicity for the attractions and experiances that Lanzarote has to offer.
+  > The site is a hub that can be used for potential visitors, the site allows users to see photos of attractions. 
+
+- Bigger audience so as many people as possible are aware of what you can do when visiting.
+  > Site has an SEO of 91.
+
+- To be able to answer and reply to queires users may have.
+  > Site has a fully functional contact form with EmailJS ensuring ane queries can be responded to.
+
+- Use interactive methods such as Google Maps so users can ascertain the location of points of interest.
+  > Google Maps API succeefully implemented onto site.
+
+## New User Stories Testing
+
+- As a new user, I want it to be immdiately obvious what the website is about and what it can offer me.
+  > Paragraph that shows immdiatatly onload allows the user to discover what the site is about. Clear labels indicate what resources and each page will include. 
+
+- As a new user, I want to know where the best places to eat are on the Island. 
+    > First page allows the user to flick through images of popular restaurants on the island. With a map directly underneath showing locations clearly with markers.
+
+- As a new user, I want to have visual aids so I can see what is being described and be more informed.
+  >  Each page has carousel showing multiple images with captions.
+
+- As a new user, I want to be able to access any social media accounts the tourism site has to find additional information.
+  > In footer there are testing working links to relavent social media channels, should the accounts exist.
+
+- As a new user I would like to find a contact form so I can get in touch for any queries.  
+  > Contactg form is fully functional for any queries. 
+
+- As a new user, I want a clear navigation menu, so I can operate the site easily.
+  Menu is fully responsive across all devices.
+
+## Returning User Stories Testing
+* As a returning user, I would like to look for further content and information to heighten my time on the Island.
+  >The site has a contact form that cna be used to enquire about further content on the webiste
+
+* As a returning user, I want to be able to see the location of other attractions and points of interest.
+  > This can be achieved using Google Map API.
+
+* As a returning user, I want to find out more detailed information on specific locations, attractions and restaurants.
+  > The site encourages users for futher information to look on trip advisor webiste and offers a link to the site on the index.html.
+
+# Deployment 
+* To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+
