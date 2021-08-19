@@ -10,7 +10,7 @@
 - [User Stories](#User-Stories)
   - [User Goals](#User-Goals)
   - [Non Registerd User](#Non-Registered-User)
-  - [Registered User Goals](#Registerd-User-Goals)
+  - [Registered User Goals](#Registered-User-Goals)
   - [Owner Goals](#Owner-Goals)
   - [User Potential](#User-Potential)
   - [This App](#This-App)
@@ -32,13 +32,12 @@
   - [Languages](#Languages)
   - [Libraries](#Libraries)
   - [Database Management](#Database-Management)
-- [Syntax](#Syntax)
 - [Testing](#Testing)
   - [Code Validation](#Code-Validation)
   - [User Story Testing](#user-stories-testing)
   - [Owner Story Testing](#owner-stories-testing)
-  - [New User Story Testing](#new-user-stories-testing)
-  - [Returning User Story Testing](#returning-user-stories-testing)
+  - [Registers User Story Testing](#registered-user-goals-testing)
+
 
 - [Deployment](#Deployment)
 - [Credit](#credits)
@@ -121,6 +120,8 @@ This websites primary focus is to be an informal, casual app people can visit to
 * For the app not to be contained to just Northern Ireland.
 * An interactive blog or newsletter.
 * The ability for users to 'favourite' the sites they enjoyed most.
+* A checklist of sites that have been visited that specific user
+* a seperate list for all user visits and another list for a specific users planned visits.
 
 ### Structure
 * Top level - 
@@ -155,7 +156,7 @@ This websites primary focus is to be an informal, casual app people can visit to
 # Wireframes
 I Used Balsamiq to generate my Wireframes.
 
-![Wireframes](#)
+![Wireframes](static/img/wireframes.png)
 
 # Features
 * Functioning Nav bar with working links.
@@ -246,48 +247,32 @@ I Used Balsamiq to generate my Wireframes.
   > All links have been tested and confirmed as working.  
 
 ## Owner Stories Testing
-- Publicity for the attractions and experiances that Lanzarote has to offer.
-  > The site is a hub that can be used for potential visitors, the site allows users to see photos of attractions. 
+- * Publicity for the attractions and sites that the National Trust has to offer in Northern Ireland. 
+  > The app is a hub that can be used for potential visitors of Northern Ireland looking to visit a national trust site, 
+  > the sites can be located and named from clicking on markers of the google map. There is information on every specific site.
 
 - Bigger audience so as many people as possible are aware of what you can do when visiting.
-  > Site has an SEO of 91.
-
-- To be able to answer and reply to queires users may have.
-  > Site has a fully functional contact form with EmailJS ensuring ane queries can be responded to.
+  > Site has an SEO of 93.
 
 - Use interactive methods such as Google Maps so users can ascertain the location of points of interest.
-  > Google Maps API succeefully implemented onto site.
+  > Google Maps API succeefully implemented onto site with clickable markers, the weather widget also allows for users to gauge the weather for thier visit
 
-## New User Stories Testing
+## Registered User Goals Testing
 
-- As a new user, I want it to be immdiately obvious what the website is about and what it can offer me.
-  > Paragraph that shows immdiatatly onload allows the user to discover what the site is about. Clear labels indicate what resources and each page will include. 
+- As a user, log into my account to gain access to the full functionality of the app.
+  > Once logged in all site functions and available to the user. 
 
-- As a new user, I want to know where the best places to eat are on the Island. 
-    > First page allows the user to flick through images of popular restaurants on the island. With a map directly underneath showing locations clearly with markers.
+- As a user, I want to be able to the upcoming visits I have planned. 
+    > All planned visits are available to view via the profile page - the visits that can be edited are the visits created by the user. 
 
-- As a new user, I want to have visual aids so I can see what is being described and be more informed.
-  >  Each page has carousel showing multiple images with captions.
+-  As a user, I want to readily see the date I have chosen to visit the selcted site.
+  > Each instance of a visit clearly shows the selected arrival date.
 
-- As a new user, I want to be able to access any social media accounts the tourism site has to find additional information.
-  > In footer there are testing working links to relavent social media channels, should the accounts exist.
-
-- As a new user I would like to find a contact form so I can get in touch for any queries.  
-  > Contactg form is fully functional for any queries. 
-
-- As a new user, I want a clear navigation menu, so I can operate the site easily.
-  Menu is fully responsive across all devices.
-
-## Returning User Stories Testing
-* As a returning user, I would like to look for further content and information to heighten my time on the Island.
-  >The site has a contact form that cna be used to enquire about further content on the webiste
-
-* As a returning user, I want to be able to see the location of other attractions and points of interest.
-  > This can be achieved using Google Map API.
-
-* As a returning user, I want to find out more detailed information on specific locations, attractions and restaurants.
-  > The site encourages users for futher information to look on trip advisor webiste and offers a link to the site on the index.html.
+- As a user I want to be able to Update, Edit and Delete any upcoming visits I have planned.
+  > Users can edit, delete, create or update any visit they have planned.
 
 # Deployment 
-* To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+* This project was deployed to Heroku. I used Gitpod as a development environment where all changes and updates have been committed to git version control system. I used push command in Gitpod to save changes into GitHub. I connected my GitHub account to Heroku and set up Automatic deployment in Heroku under Deploy section.
+
+
 
