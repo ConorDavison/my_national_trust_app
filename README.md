@@ -57,13 +57,14 @@ relevant imagery of some sites and the attractions will all be employed to offer
 ### User Goals
 
 * As a user, I want to be able to access the website, regardless of the device I am using.
+* As a user, I want my navigation options to be specific to whether I am logged in.
 * As a user, I want to be able to easily navigate to other sections of the website regardless of the current section I'm viewing.
-* As a user, I expect all links of the site to be in full working order - and to be able to easily access any social media accounts relative to the company.
 * As a user, I want my own personal account to keep a track of my own planned visits.
 
 ### Non-Registered User
 
 * Navigate to Sign-Up page to Register an account.
+
 
 
 ### Registered User Goals
@@ -229,14 +230,17 @@ I Used Balsamiq to generate my Wireframes.
 - HTML has been passed through W3 Validator with no issues or warnings. 
 - CSS has passed through W3 JigSaw validator with no issues. 
 - JS - Passed through JSHint with no major issues some warnings to advise certain synatx is available in 'ES6 (use 'esversion: 6')'.
-- PEP8 !!!!  check this***
+- Python code has been passed through http://pep8online.com/, no concerns or errors.
 
 ## User Stories Testing
 - As a user, I want to be able to access the website, regardless of the device I am using.
   > The website has been tested across virtual different devices with no issues.
 
+- As a user, I want my navigation options to be specific to whether I am logged in.
+  >Navigation options only show profile or visits section when logged in. When logged out only options are home or register.
+
 - As a user, I want to be able to easily navigate to other sections of the website regardless of the current section I'm viewing.
-  > Fully responiive navigation bar that allows you to visit any part of the site with ease.
+  > Fully responiive navigation bar that allows you to visit any part of the site with ease. Once logged in.
 
 - As a user, I expect all links of the site to be in full working order - and to be able to easily access any social media accounts relative to the company. 
   > All links have been tested and confirmed as working.  
