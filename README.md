@@ -2,7 +2,7 @@
 
 # My National Trust
 
-![Mockup](#)
+![Mockup](static/img/my-national-trust-mockup.png)
 
 ## [Table of Contents]()
 - [Project Goals](#Project-goals)
@@ -218,13 +218,13 @@ I Used Balsamiq to generate my Wireframes.
 * All elements of CRUD satisfied. Data can be sent to and from Database with no issues. Data and be read/created/updated and deleted.
 * Site fully responsive to all breakpoints.
 ## Google Lighthouse
-* 
+* Google Lighthouse report generated a SEO of 93 and accessability of 93. Performace was marked at 93 and best preactices given a grade of 87.
 ## Functionality Testing
 - I used Chrome developer tools throughout the creation and devlopemnt of this site.
 ## Combatability Testing
 -  The site has been tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tools and Chrome developer tools. 
 ### Known bug
--  
+-  On collapsible accordion, within the list of sites the site name 'Castle Coole' does not load despite the the site_description loading from MongoDB correctly. 
 ## Code Validation
 - HTML has been passed through W3 Validator with no issues or warnings. 
 - CSS has passed through W3 JigSaw validator with no issues. 

@@ -5,7 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-if os.path.exists("env.py"):
+if os.path.exists('env.py'):
     import env
 
 
@@ -26,7 +26,7 @@ def home():
         user = mongo.db.users.find_one(
             {'username': session['user']})
 
-        return render_template('index.html')
+        return render_template('index.html', user=user)
 
     else:
 
@@ -44,7 +44,7 @@ def search():
     query = request.form.get("query")
     sites = list(mongo.db.sites.find({"$text": {"$search": query}}))
     return render_template("sites.html", sites=sites)
-    
+
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
@@ -156,7 +156,6 @@ def delete(visit_id):
     mongo.db.planned_visits.remove({"_id": ObjectId(visit_id)})
     flash("Visit removed")
     return redirect(url_for("the_sites"))
-
 
 
 if __name__ == "__main__":
