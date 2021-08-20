@@ -299,12 +299,60 @@ For this project, the NoSQL database MongoDB was used to store the dataset. With
 # Deployment 
 * This project was deployed to Heroku. I used Gitpod as a development environment where all changes and updates have been committed to git version control system. I used push command in Gitpod to save changes into GitHub. I connected my GitHub account to Heroku and set up Automatic deployment in Heroku under Deploy section.
 
+- The application is connected to a MongoDB Atlas Cluster. A Project database can be created using the following steps:
+
+  - Log into MongoDB or create an account.
+  - Locate and select the New Project button and give your project a name. Navigate to the project page.
+  - Locate and select the Create a New Cluster button. Once selected:
+  - Choose Shared Cluster.
+  - Select your Cloud Provider and Region.
+  - Click on Cluster Tier and select tier of preference.
+  - Click on Cluster Name and create your cluster.
+  - Locate and select Database Access. Once selected, click Add New Database User:
+  - Choose Password for the Authentication Method
+  - Enter a username and password
+  - Ensure Read and write to any database is selected in Database User Privileges
+  - Add User
+  - Locate and select Network Access under Database Access. Once selected, click Add IP Address:
+  - Select Allow Access from anywhere.
+  - Select Confirm.
+  - Locate and select Clusters.
+  - Click Collections, then Create Database to start adding documents to your database collections:
+  - Enter chosen Database Name
+  - Enter chosen Collection Name
+  - Select Create
+  - Click Create Collection and create the necessary collections.
+
+
+### How to run this project locally:
+
+- Install the GitPod Browser Extension for Chrome.
+- After installation, restart the browser.
+- Log into GitHub or create an account.
+- Locate the GitHub Repository.
+- Click the "GitPod" button. This will trigger a new gitPod workspace to be created from the code in github where you can work locally.
+
+### How to run this project within a local IDE, such as VSCode:
+
+  - Log into GitHub or create an account.
+  - Locate the GitHub Repository.
+  - Under the repository name, click "Clone or download".
+  - In the Clone with HTTPs section, copy the clone URL for the repository.
+  - In your local IDE open the terminal.
+  - Change the current working directory to the location where you want the cloned directory to be made.
+  - Type 'git clone', and then paste the URL you have copied.
+git clone https://github.com/USERNAME/REPOSITORY
+Press Enter. Your local clone will be created.
+(Further reading and troubleshooting on cloning a repository from GitHub here)
+
+
+
 # Credit
 * To complete this project I used the Code Institute student template: gitpod full template
 * Ideas and knowledge library:
   - w3schools.com
   - css-tricks.com
   - Materialize was used for styling
-  - The Code Instute Task Planner app for user authentication was used. 
+  - Tim Nelson with The Code Instute & the Task Planner app for user authentication python code. 
 
 
