@@ -26,6 +26,7 @@
   - [Imagery](#Imagery)
 
 - [Wireframes](#Wireframes)
+- [Data Schema](#Data-Schema)
 - [Features](#Features)
   - [Future Features](#Future-Features)
 - [Technology Used](#Technology-Used)
@@ -48,9 +49,7 @@ The aim of this app was to deliver a simple and consise planner focused on the N
 My National Trust will be responsive on all devices focusing on mobile first design, also ensuring visitors have a unique user experience. 
 This app will be aimed at users who are looking to travel to the multiple National Trust sites and want to know information and the location for each site. This can be viewed via the Google Map on the Sites.html page. The users can be locals or tourists from oversees not wanting to miss out on the experiances that can be had. 
 All of this readily available information will be displayed clearly and in hierarchy of importance on each page. 
-The navigation bar, which allows you to readily access specific information on the site, interactive features, internal website links showing the user further information on specific topics, and aesthetically pleasing, 
-relevant imagery of some sites and the attractions will all be employed to offer the user a wholesome and informative experience. 
-
+The navigation bar, which allows you to readily access specific information on the site, interactive features, internal website links showing the user further information on specific sites.
 ## User Stories
 
 ### User Goals
@@ -157,6 +156,32 @@ This websites primary focus is to be an informal, casual app people can visit to
 I Used Balsamiq to generate my Wireframes.
 
 ![Wireframes](static/img/wireframes.png)
+
+# Data Schema
+For this project, the NoSQL database MongoDB was used to store the dataset. Within the created database, three collections were created, as shown below:
+![Data Schema](static/img/data_schema.png)
+
+## Collections
+
+### User collection
+* When registering an account the user provides:
+  - Username
+  - Password
+
+### Sites Collection
+* The sites collection consits of:
+  - Site name
+  - Site location
+  - Site description 
+
+### Planned Visits Collection
+* The planned visits collection consits of:
+  - Site name
+  - Notes
+  - Arrival
+  - Username 
+
+
 
 # Features
 * Functioning Nav bar with working links.
@@ -274,5 +299,12 @@ I Used Balsamiq to generate my Wireframes.
 # Deployment 
 * This project was deployed to Heroku. I used Gitpod as a development environment where all changes and updates have been committed to git version control system. I used push command in Gitpod to save changes into GitHub. I connected my GitHub account to Heroku and set up Automatic deployment in Heroku under Deploy section.
 
+# Credit
+* To complete this project I used the Code Institute student template: gitpod full template
+* Ideas and knowledge library:
+  - w3schools.com
+  - css-tricks.com
+  - Materialize was used for styling
+  - The Code Instute Task Planner app for user authentication was used. 
 
 
