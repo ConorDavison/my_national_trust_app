@@ -35,6 +35,7 @@ def home():
 
 @app.route("/the_sites")
 def the_sites():
+    # list of sites from site collection in db
     sites = list(mongo.db.sites.find())
     return render_template('sites.html', sites=sites)
 
@@ -120,6 +121,7 @@ def logout():
 @app.route('/visit', methods=["GET", "POST"])
 def visit():
     if request.method == "POST":
+        # populates db with form input
         visits = {
             "site_name": request.form.get("site_name"),
             "notes": request.form.get("notes"),
@@ -153,6 +155,7 @@ def edit_visit(visit_id):
 
 @app.route('/delete/<visit_id>')
 def delete(visit_id):
+    # removes instance of visit via the unique id
     mongo.db.planned_visits.remove({"_id": ObjectId(visit_id)})
     flash("Visit removed")
     return redirect(url_for("the_sites"))

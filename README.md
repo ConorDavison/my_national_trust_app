@@ -133,6 +133,10 @@ This websites primary focus is to be an informal, casual app people can visit to
 * Footer - 
     * Copyright information stored here.
     * Some internal links may also be added here.
+  
+* Basic structure of app
+
+  ![structure](static/img/structure.png)
 
 ### Design
 
